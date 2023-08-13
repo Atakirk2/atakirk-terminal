@@ -8,6 +8,9 @@ export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
   var c = '';
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
+    if(Object.keys(bin).sort()[i-1]=="gulfem"){
+      continue;
+    }
     if (i % 7 === 0) {
       c += Object.keys(bin).sort()[i - 1] + '\n';
     } else {
@@ -38,6 +41,31 @@ More about me:
 'readme' - my github readme.`;
 };
 
+export const gulfem = async (args: string[]): Promise<string> => {
+  return `Bu dünya üzerinde gördüğüm en güzel şey. Bu evrendeki en harika varlık.
+
+
+           Onunla birlikte olduğum için çok şanslıyım.
+
+                  ,ad8PPPP88b,     ,d88PPPP8ba,
+                d8P"      "Y8b, ,d8P"       "Y8b
+                dP'           "8a8"           'Yd
+                8(              "              )8
+                I8                             8I
+                 Yb,                         ,dP
+                  "8a,                     ,a8"
+                    "8a,                 ,a8"
+                      "Yba             adP"   
+                        'Y8a         a8P'
+                          '88,     ,88'
+                            "8b   d8"
+                              8b d8"
+                              '888'
+                                "
+
+  `;
+};
+
 export const resume = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
   return 'Opening resume...';
@@ -45,11 +73,7 @@ export const resume = async (args: string[]): Promise<string> => {
 
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
+  return `Thanks for your interest but for now I dont accept donate :)`;
 };
 
 // Contact
@@ -76,10 +100,6 @@ export const google = async (args: string[]): Promise<string> => {
   return `Searching google for ${args.join(' ')}...`;
 };
 
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
-};
 
 export const bing = async (args: string[]): Promise<string> => {
   window.open(`https://bing.com/search?q=${args.join(' ')}`);
@@ -135,20 +155,27 @@ export const emacs = async (args?: string[]): Promise<string> => {
 
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+  return `Permission denied: With great power comes great responsibility :( `;
 };
 
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+  
+   █████╗ ████████╗ █████╗ ██████╗ ███████╗██████╗ ██╗  ██╗                           
+██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██╔══██╗██║ ██╔╝                           
+███████║   ██║   ███████║██████╔╝█████╗  ██████╔╝█████╔╝                            
+██╔══██║   ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══██╗██╔═██╗                            
+██║  ██║   ██║   ██║  ██║██████╔╝███████╗██║  ██║██║  ██╗                           
+╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝                           
+                                                                                    
+██╗   ██╗ █████╗ ██╗   ██╗██╗   ██╗███████╗██╗   ██╗ █████╗ ███████╗ █████╗ ██████╗ 
+╚██╗ ██╔╝██╔══██╗██║   ██║██║   ██║╚══███╔╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔══██╗
+ ╚████╔╝ ███████║██║   ██║██║   ██║  ███╔╝  ╚████╔╝ ███████║███████╗███████║██████╔╝
+  ╚██╔╝  ██╔══██║╚██╗ ██╔╝██║   ██║ ███╔╝    ╚██╔╝  ██╔══██║╚════██║██╔══██║██╔══██╗
+   ██║   ██║  ██║ ╚████╔╝ ╚██████╔╝███████╗   ██║   ██║  ██║███████║██║  ██║██║  ██║
+   ╚═╝   ╚═╝  ╚═╝  ╚═══╝   ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+                                                                                    
 
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.

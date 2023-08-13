@@ -1,20 +1,20 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "readmeUrl": "http://github.com/Atakirk2/Atakirk2/blob/main/README.md",
+  "title": "Atakirk Terminal",
+  "name": "Ataberk Yavuzyasar",
+  "ascii": "Atakirk",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "https://github.com/Atakirk2",
+    "linkedin": "https://www.linkedin.com/in/ataberk-yavuzyasar/"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
+  "email": "ataberk.yavuzyasar@gmail.com",
+  "ps1_hostname": "guest",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "repo": "https://github.com/Atakirk2",
+  "resume_url": "https://drive.google.com/file/d/1cFLIhdrsDF-0xoMuQ6O3VG4lBCxjQgLP/view?usp=sharing",
   "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
+    "paypal": "https://paypal.me",
+    "patreon": "https://patreon.com"
   },
   "colors": {
     "light": {
